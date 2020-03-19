@@ -4,7 +4,7 @@ MobigateSDK is a tool for gathering users phone data and events tracking.
 
 ## Overview
 
-[![Library version](https://img.shields.io/badge/pub-1.0.2-blue)](https://www.npmjs.com/package/react-native-mobigate) [![Platforms](https://img.shields.io/badge/platforms-android-lightgrey)](https://developer.android.com/)
+[![Library version](https://img.shields.io/badge/pub-1.0.2-blue)](https://pub.dev/packages/flutter_mobigate) [![Platforms](https://img.shields.io/badge/platforms-android-lightgrey)](https://developer.android.com/)
 
 ## Getting Started
 ### Initialize SDK first
