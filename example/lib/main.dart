@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _libraryResult = 'not started';
-  MobigateSDK mobienceInstance = MobigateSDK(MobigateOptions(
+  MobigateSDK mobigateInstance = MobigateSDK(MobigateOptions(
       "V0K6jhiIfem6CRWHYZ59Nmj3oFBBKbJsnSsWfR2JNq7ktblOUXwbJoBQTpWnw2uSwW76gpiu2kun50jweTY69B"
     /*,custom options, check docs for more details
       userFields: [UserField.EMAIL, UserField.IMEI],
@@ -38,15 +38,15 @@ class _MyAppState extends State<MyApp> {
 
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      libraryInitResult = await mobienceInstance.init;
+      libraryInitResult = await mobigateInstance.init;
       if (libraryInitResult == 'success') {
         /*You can configure custom collectors after init
-        mobienceInstance.configureDataCollectors(true, [
+        mobigateInstance.configureDataCollectors(true, [
           DataCollector.APPS_LIST,
           DataCollector.APPS_USAGE,
           DataCollector.BROWSER
         ]);*/
-        startResult = await mobienceInstance.startSdk;
+        startResult = await mobigateInstance.startSdk;
       }
     } on PlatformException {
       libraryInitResult = 'Failed to start library';
@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void trackEvent() {
-    mobienceInstance.trackEvent((CategoryBuilder(EventCategory.BEGIN_TRIAL)
+    mobigateInstance.trackEvent((CategoryBuilder(EventCategory.BEGIN_TRIAL)
       ..setParameter(EventParameter.CITY, "Warsaw")
       ..setParameter(EventParameter.CONTENT_ID, 523456)
       ..setParameter(EventParameter.COUPON_CODE, 97636572)

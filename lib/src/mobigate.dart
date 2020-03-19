@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_mobigate/src/category.dart';
 import 'package:flutter_mobigate/src/options.dart';
 import 'dart:convert';
-import 'mobience_consts.dart';
+import 'mobigate_consts.dart';
 
 class MobigateSDK {
   MobigateOptions options;
@@ -35,7 +35,7 @@ class MobigateSDK {
             ? _convertEnumListToStringList(options.userFields)
             : null,
         "monitorState":
-        options.monitorState != null ? options.monitorState.name : null,
+            options.monitorState != null ? options.monitorState.name : null,
         "notificationText": options.notificationText,
         "iDsProfiles": options.iDsProfiles
       });
@@ -95,7 +95,7 @@ class MobigateSDK {
   Future<String> getSDKUniqueIdentifier() async {
     if (Platform.isAndroid) {
       final String sdkUniqueIdentifier =
-      await _channel.invokeMethod('getSDKUniqueIdentifier');
+          await _channel.invokeMethod('getSDKUniqueIdentifier');
       return sdkUniqueIdentifier;
     } else
       return '';
@@ -104,7 +104,7 @@ class MobigateSDK {
   Future<List<int>> getIDsProfiles() async {
     if (Platform.isAndroid) {
       var ints =
-      new List<int>.from(await _channel.invokeMethod('getIDsProfiles'));
+          new List<int>.from(await _channel.invokeMethod('getIDsProfiles'));
       return ints;
     } else
       return [];

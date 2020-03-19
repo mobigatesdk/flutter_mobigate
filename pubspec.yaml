@@ -1,10 +1,10 @@
 name: flutter_mobigate
-description: Flutter Mobigate SDK plugin
-version: 1.0.1
+description: Flutter Mobigate SDK plugin. MobigateSDK is a tool for gathering users phone data and events tracking.
+version: 1.0.2
 homepage: https://wiki.spicymobile.pl/wiki/mobigatesdk
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   flutter:
