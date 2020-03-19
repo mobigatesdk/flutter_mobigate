@@ -1,5 +1,6 @@
 ///User/device identifiers
 enum UserField { EMAIL, IMSI, MAC, IMEI, SERIAL }
+
 ///Defines how the library works
 enum MonitorState { DEFAULT, HIDE_TRAY, BLOCK_DATA_BG }
 
