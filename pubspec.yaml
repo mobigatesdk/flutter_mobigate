@@ -1,0 +1,22 @@
+name: flutter_mobigate
+description: Flutter Mobigate SDK plugin
+version: 1.0.1
+homepage: https://wiki.spicymobile.pl/wiki/mobigatesdk
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: pl.spicymobile.flutter_mobigate
+        pluginClass: FlutterMobigatePlugin
